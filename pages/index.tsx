@@ -1,5 +1,6 @@
 import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
           {user && (
             <>
               <h3>{user.email}</h3>
-              <a href="/api/auth/logout">Logout</a>
+              <Link href="/api/auth/logout">Logout</Link>
             </>
           )}
         </div>
