@@ -9,6 +9,9 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  console.log("the AUTH0_SECRET env var is set: ", !!process.env.AUTH0_SECRET);
-  res.status(200).json({ name: "John Doe" });
+  res
+    .status(200)
+    .json({
+      name: `the AUTH0_SECRET env var is set: ${!!process.env.AUTH0_SECRET}`,
+    });
 }
